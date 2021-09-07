@@ -34,10 +34,10 @@ public abstract class FileBasedTest extends ConfigurableTest {
    * Get the files to be analyzed by Language Server from {@link CobolTextRegistry} using file-based
    * implementation.
    *
-   * @return a stream of objects that would be passed to the constructor one by one
+   * @return the list of objects that would be passed to the constructor one by one
    */
-  protected static Stream<CobolText> getTextsToTest() {
-    return TEXT_REGISTRY.getPositives().stream();
+  protected static List<CobolText> getTextsToTest() {
+    return TEXT_REGISTRY.getPositives();
   }
   /**
    * Get the copybooks to be passed to the Language Server while analyzing from {@link
